@@ -105,7 +105,10 @@ public class StringUtilities {
      * @return the second word of a string delimited by spaces.
      */
     public static String getSecondWord(String spaceDelimitedString){
-        return null;
+        String[] outcome = spaceDelimitedString.split(" ", 2);
+        String first = outcome[1];
+        return first;
+
     }
 
     /**
@@ -113,6 +116,8 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-        return null;
+        String answer = new StringBuilder(stringToReverse).reverse().toString();
+        //        return answer;
+        return answer;
     }
 }
