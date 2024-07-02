@@ -8,7 +8,8 @@ public class StringUtilities {
      * @return `Hello World` as a string
      */
     public static String getHelloWorld() {
-        return null;
+        String outcome = "Hello World";
+        return outcome;
     }
 
     /**
@@ -17,7 +18,8 @@ public class StringUtilities {
      * @return the concatenation of two strings, `firstSegment`, and `secondSegment`
      */
     public static String concatenation(String firstSegment, String secondSegment){
-        return null;
+        String outcome = firstSegment + secondSegment;
+        return outcome;
     }
 
     /**
@@ -26,7 +28,9 @@ public class StringUtilities {
      * @return the concatenation of an integer, `firstSegment`, and a String, `secondSegment`
      */
     public static String concatenation(int firstSegment, String secondSegment){
-        return null;
+        String outcome = Integer.toString(firstSegment);
+        outcome += secondSegment;
+        return outcome;
     }
 
     /**
@@ -34,7 +38,9 @@ public class StringUtilities {
      * @return the first 3 characters of `input`
      */
     public static String getPrefix(String input){
-        return null;
+        String outcome ="";
+        outcome = input.substring(0,3);
+        return outcome;
     }
 
     /**
@@ -42,16 +48,25 @@ public class StringUtilities {
      * @return the last 3 characters of `input`
      */
     public static String getSuffix(String input){
-        return null;
+        String outcome ="";
+        outcome = input.substring(input.length() -3);
+        return outcome;
     }
-
     /**
      * @param inputValue the value to be compared
      * @param comparableValue the value to be compared against
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
     public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-        return null;
+//        if (new String(inputValue).equals(comparableValue)){
+//            Boolean outcome = true;}
+            if (inputValue.equals(comparableValue)){
+                return true;
+            }
+            else {
+                return false;
+            }
+
     }
 
     /**
@@ -59,7 +74,18 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-        return null;
+        int lengthOf = inputValue.length();
+        System.out.println(inputValue.length());
+        int middleOf = lengthOf/2;
+        if (middleOf %2 != 0) {
+            System.out.println("odd");
+            return inputValue.charAt(middleOf);
+        }
+        else {
+            middleOf = lengthOf/2 -1;
+            System.out.println("even");
+            return inputValue.charAt(middleOf);
+        }
     }
 
     /**
@@ -67,7 +93,11 @@ public class StringUtilities {
      * @return the first sequence of characters
      */
     public static String getFirstWord(String spaceDelimitedString){
-        return null;
+        String[] outcome = spaceDelimitedString.split(" ", 2);
+        String first = outcome[0];
+        return first;
+
+
     }
 
     /**
